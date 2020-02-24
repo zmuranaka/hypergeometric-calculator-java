@@ -50,7 +50,7 @@ public class check
         return ldesiredSuccesses;
    }
 
-    public static long popSize(String input)
+    private static long popSize(String input)
     {
         // Tries to convert the String the user entered to a long
         try
@@ -66,7 +66,7 @@ public class check
         }
     }
 
-    public static long popSuccesses(String input)
+    private static long popSuccesses(String input)
     {
         // Tries to convert the String the user entered to a long
         try
@@ -82,7 +82,7 @@ public class check
         }
     }
 
-    public static long sampleSize(String input)
+    private static long sampleSize(String input)
     {
         // Tries to convert the String the user entered to a long
         try
@@ -98,7 +98,7 @@ public class check
         }
     }
 
-    public static long desiredSuccesses(String input)
+    private static long desiredSuccesses(String input)
     {
         // Tries to convert the String the user entered to a long
         try
