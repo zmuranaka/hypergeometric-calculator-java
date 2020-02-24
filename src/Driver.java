@@ -25,9 +25,9 @@ public class Driver
       orLessExactChance *= orLessDeck.getcombination(); // Chance of getting exactly desired successes
       double orLessInclusiveChance = orLessDeck.orLess(orLessExactChance); // Chance of getting desired successes or less
       
-	   // The next five statements print out the probabilities
+      // The next five statements print out the probabilities
       System.out.println("Chance of exactly desired successes: " + orGreaterExactChance); // orGreaterExactChance and orLessExactChance should be equal so this could also be orLessExactChance
-	   System.out.println("Chance of less than desired successes: " + (orLessInclusiveChance - orLessExactChance));
+      System.out.println("Chance of less than desired successes: " + (orLessInclusiveChance - orLessExactChance));
       System.out.println("Chance of desired successes or less: " + orLessInclusiveChance);
       System.out.println("Chance of greater than desired successes: " + (orGreaterInclusiveChance - orGreaterExactChance));
       System.out.println("Chance of desired successes or greater: " + orGreaterInclusiveChance);
