@@ -7,7 +7,7 @@
 public class Driver
 {
     public static void main(String[] args)
-    { 
+    {
         // The next four statements use static methods from check.java to get valid input
         long popSize = check.validPopSize();
         long popSuccesses = check.validPopSuccesses();

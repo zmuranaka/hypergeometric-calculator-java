@@ -53,4 +53,4 @@ https://smallbusiness.chron.com/write-cmd-script-53226.html
 
 Zachary Muranaka  
 &nbsp;&nbsp;&nbsp;&nbsp;zacharymuranaka@mail.weber.edu  
-&nbsp;&nbsp;&nbsp;&nbsp;http://icarus.cs.weber.edu/~zm83483/
+&nbsp;&nbsp;&nbsp;&nbsp;https://zmuranaka.github.io/

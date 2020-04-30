@@ -55,18 +55,17 @@ public class Deck
          * Therefore, we can substitute (n - r) for r if we have a larger r value
          * Attempting to prevent overflow, if (n - r) is less than r we use it instead
          */
-        if(n - r < r)
-              r = n - r;
+        if(n - r < r) r = n - r;
       
-      // Tries to calculate the combination of n and r
-      try
-      {
+        // Tries to calculate the combination of n and r
+        try
+        {
             long top = 1; // top holds the value of n * (n - 1) * (n - 2) ...
             long bottom = 1; // bottom holds the value of r * (r - 1) * (r - 2) ...
           
             if(r != 0)
             {
-                  /*
+                /*
                  * Because this only loops until r = 0, we only calculate the first r numbers of the factorial
                  * This is equivalent to the n * (n - 1) * (n - 2) * ... * (n - r + 1)
                  * In other words, it is a reduced factorial of n from n to n - r + 1
@@ -87,9 +86,8 @@ public class Deck
                     n--;
                     r--;
                 }
-          }
-            else // n combination 0, where n is any number, is always equal to 1
-                top = 1;
+            }
+            else top = 1; // n combination 0, where n is any number, is always equal to 1
 
             /*
              * A factorial always simplifies to a whole number
@@ -105,15 +103,16 @@ public class Deck
             System.exit(1);
         }
       
-      return 1; // This statement should never actually occur but the method needs a default return value
+        return 1; // This statement should never actually occur but the method needs a default return value
     }
 
     // Constructor for a Deck object
     public Deck(final long popSize, final long popSuccesses, final long sampleSize, final long desiredSuccesses)
     {
         // Checks if the numbers they entered allow for a valid Deck
-        if(popSize >= popSuccesses && popSize >= sampleSize && popSize >= desiredSuccesses && popSuccesses >= desiredSuccesses && sampleSize >= desiredSuccesses && 
-            popSize >= 0 && popSuccesses >= 0 && sampleSize >= 0 && desiredSuccesses >= 0)
+        if(popSize >= popSuccesses && popSize >= sampleSize && popSize >= desiredSuccesses
+           && popSuccesses >= desiredSuccesses && sampleSize >= desiredSuccesses
+           && popSize >= 0 && popSuccesses >= 0 && sampleSize >= 0 && desiredSuccesses >= 0)
         {
             try
             {
