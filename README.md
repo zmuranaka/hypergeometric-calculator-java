@@ -29,7 +29,7 @@ src
 ## Files:
 
 check.java  
-&nbsp;&nbsp;&nbsp;&nbsp;This class contains static functions that the Driver class uses to prompt the user to enter the numbers for the hypergeometric distribution. If the user enters invalid input, the check class will tell them that the input is invalid and prompt them to enter it again.  
+&nbsp;&nbsp;&nbsp;&nbsp;This class contains a static method that the Driver class uses to prompt the user to enter the numbers for the hypergeometric distribution. If the user enters invalid input, the check class will tell them that the input is invalid and prompt them to enter it again.  
 Deck.java  
 &nbsp;&nbsp;&nbsp;&nbsp;This is the object that the Driver creates when the user has entered valid information. It is called Deck because drawing cards from a deck is a common scenario in which a hypergeometric distribution would be useful. This class contains information about the distribution and many methods used to calculate the probability of getting the number of successes that the user desired.  
 Driver.java  
