@@ -11,9 +11,9 @@ public class Deck
     private long sampleSize; // The size of the sample you take from the entire population
     private long desiredSuccesses; // The amount of successes you are looking for from your sample
     private long popFailures; // Calculates the amount of failures throughout the entire population
-    double exactChance;
-    double orGreaterInclusiveChance;
-    double orLessInclusiveChance;
+    private double exactChance;
+    private double orGreaterInclusiveChance;
+    private double orLessInclusiveChance;
 
     // Constructor for the Deck class
     public Deck(final long popSize, final long popSuccesses, final long sampleSize, final long desiredSuccesses)
@@ -32,8 +32,8 @@ public class Deck
                 this.popFailures = popSize - popSuccesses;
 
                 this.exactChance = probability(this.desiredSuccesses); // Chance of getting exactly desired successes
-                this.orGreaterInclusiveChance = orGreater(exactChance); // Chance of getting desired successes or greater
-                this.orLessInclusiveChance = orLess(exactChance); // Chance of getting desired successes or less
+                this.orGreaterInclusiveChance = orGreater(this.exactChance); // Chance of getting desired successes or greater
+                this.orLessInclusiveChance = orLess(this.exactChance); // Chance of getting desired successes or less
             }
             // It is possible to construct a valid Deck that still results in a divide-by-zero error
             catch(final ArithmeticException aException)
@@ -132,6 +132,7 @@ public class Deck
     // Calculates the hypergeometric probability
     private double probability(long currentDesiredSuccesses)
     {
+        // Local variables are used so as to not change the actual values within the Deck object
         double popSize = this.popSize;
         double popSuccesses = this.popSuccesses;
         double popFailures = this.popFailures;
